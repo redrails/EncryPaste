@@ -1,0 +1,33 @@
+
+	body{
+		background:#EEE;
+		color:black; text-shadow:1px 1px 5px grey; font-family:Calibri;
+		margin-top:1%; text-align:center;
+	}
+	
+	#box{
+		width:80%; border:1px dashed Grey;
+		padding: 20px; text-align:center;
+		height:300px;
+	}
+	
+	textarea{
+		background:#eee; color:black; text-shadow:none;
+		font-family:lucida console;
+	}
+	
+	input.button{
+		color:#EEE; background:Grey; text-shadow:1px 1px 5px grey; font-family:Calibri;
+	}
+	input.button:hover{
+		color:#EEE; background:LightGrey; text-shadow:1px 1px 5px grey; font-family:Calibri;
+	}
+
+	.centered {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: -50px;
+		margin-left: -100px;
+	
+	}
