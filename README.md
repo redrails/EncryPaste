@@ -16,7 +16,7 @@ include("includes/encrypaste.class.php");
 
 $encryPaste = new EncryPaste; // Initiate the EncryPaste Class
 
-$encryPaste->executeEncry("data_to_encrypt", "key"); // Call the main function with 2 params: data and key.
+$encryPaste->executeEncry("data_to_encrypt", "key"); // Call main function with 2 params: data and key.
 
 ```
 
