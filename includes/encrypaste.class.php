@@ -14,6 +14,7 @@ github.com/redrails
 */
 
 include("database.class.php");
+include("generate.use.php");
 global $getRow;
 
 class EncryPaste
@@ -82,7 +83,9 @@ protected $database;
 	
 	function executeEncry($iData, $iKey){		//This is the main function which executes the insert query for the paste into the db.
 	
-		$this->random = md5(file_get_contents("http://randomword.setgetgo.com/get.php"));
+		$this->genClass = new generate;
+		
+		$this->random = md5($this->genClass->RandomString(rand(0,26)));
 	
 		$this->database->query('INSERT INTO pastes (ID, paste, date, insertIP) VALUES (:ID, :paste, :date, :insertIP)');
 	
@@ -98,6 +101,7 @@ protected $database;
 		echo "Click here to view your paste: <a href='retrieve.php?id=". $this->random ."'>". $this->random ."</a>";
 			
 	}
+	
 	
 	function viewPaste($id){		//Viewing paste function for the basic viewing, requires $id we use: $_GET['id'] from the retrieve.php.
 	
