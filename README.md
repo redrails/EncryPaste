@@ -27,6 +27,11 @@ Changelog
 =========
 
 ```
-EncryPaste - v1 - 29/09/2014
-- Initial release
+EncryPaste - V1 FINAL - 02/10/2014
+  - Changed random URL generation method. => Added ./includes/generate.use.php
+  -Improvements to encrypaste.class.php
+
+EncryPaste - BETA 1 - 29/09/2014
+  - Initial release
+  
 ```
