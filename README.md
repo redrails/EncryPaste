@@ -22,6 +22,10 @@ $encryPaste->executeEncry("data_to_encrypt", "key"); // Call main function with 
 
 That's all you need! The index.php is compiled with many additions including validations and code. 
 
+Status
+======
+
+Current status: Released <a href="https://github.com/redrails/EncryPaste/releases/tag/v1">V1</a>.
 
 Changelog
 =========
