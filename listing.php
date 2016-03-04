@@ -31,36 +31,22 @@
 
 include("includes/encrypaste.class.php");
 
-if(isset($_POST['submit'])){
-
-	if(!empty($_POST['data']) && !empty($_POST['pass'])){
-	
-		$enc = new EncryPaste;
-		
-		$enc->executeEncry($_POST['data'], $_POST['pass']);
-	
-	}
-
-}
+$enc = new EncryPaste;
+$output = $enc->viewAll();
 
 ?>
 
-	<h2>EncryPaste your data!</h2><hr /><br>
+	<h2>Listing of all EncryPastes</h2><hr /><br>
 	<div id="box">
-	<form action="#" method="post">
+	<table align="center">
+	<?php foreach((array)$output as $items) {
+		echo "<tr>";
+		echo "<th align='left'><a href='retrieve.php?id=". $items['ID'] ."'>". $items['ID'] ."</a></th>";
+		echo "<th align='left'> @ ". $items['date'] ."</th>";
+		echo "<br></tr>";
 
-		<textarea style="width:100%;height:90%" name="data"></textarea> <br><br>
-
-		<input type="text" name="pass" placeholder="Password"> <br>
-	</div>
-	<br>
-		<input type="submit" class="button" name="submit" value="ENCRYPASTE">
-
-	</form>
-	
-	</center>
-	<br><hr /><br><br>
-	<div class="push"></div>
+	}?>
+	</table>
 	</div>
 	<div class="footer">
 		Created by <a href="http://www.ihtasham.com/">Ihtasham</a>

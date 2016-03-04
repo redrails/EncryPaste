@@ -115,6 +115,12 @@ protected $database;
 			
 	}
 
+	function viewAll(){
+		$this->database->query("SELECT * FROM pastes");
+		$this->returnSet = $this->database->resultset();
+		return $this->returnSet;
+	}
+
 }
 
 

@@ -7,7 +7,7 @@
 
 	<a href="index.php"><img src="style/logo.png" height="150"  /></a>
 	<br><hr />
-	<a href="index.php">Encrypt</a> | <a href="retrieve.php">Decrypt</a>
+	<a href="index.php">Encrypt</a> | <a href="retrieve.php">Decrypt</a> | <a href="listing.php">List Index</a>
 	<br><hr />
 	
 <?php
