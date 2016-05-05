@@ -27,6 +27,11 @@ Changelog
 =========
 
 ```
+EncryPaste - V3 FINAL - 05/05/2016
+  - Added the id field in the database to better manage pastes so they pring in order.
+  - Listings page styling is now also fixed.
+  - Added changed to install.php to work with the new databse changes. 
+
 EncryPaste - V2 FINAL - 08/04/2016
   - listings.php now added to see overview of all submits.
   - MCrypt fixed.
