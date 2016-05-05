@@ -1,3 +1,7 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
@@ -33,17 +37,16 @@ include("includes/encrypaste.class.php");
 
 $enc = new EncryPaste;
 $output = $enc->viewAll();
-
 ?>
 
 	<h2>Listing of all EncryPastes</h2><hr /><br>
 	<div id="box">
 	<table align="center">
-	<?php foreach((array)$output as $items) {
+	<?php foreach($output as $items) {
 		echo "<tr>";
-		echo "<th align='left'><a href='retrieve.php?id=". $items['ID'] ."'>". $items['ID'] ."</a></th>";
+		echo "<th align='left'><a href='retrieve.php?id=". $items['pID'] ."'>". $items['pID'] ."</a></th>";
 		echo "<th align='left'> @ ". $items['date'] ."</th>";
-		echo "<br></tr>";
+		echo "</tr>";
 
 	}?>
 	</table>

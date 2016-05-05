@@ -87,11 +87,11 @@ protected $database;
 		
 		$this->random = md5($this->genClass->RandomString(rand(0,26)));
 	
-		$this->database->query('INSERT INTO pastes (ID, paste, date, insertIP) VALUES (:ID, :paste, :date, :insertIP)');
+		$this->database->query('INSERT INTO pastes (pID, paste, date, insertIP) VALUES (:pID, :paste, :date, :insertIP)');
 	
 		$this->encryptedOutput = $this->encrypt($iData, $iKey);
 		$this->database->bind(":paste", $this->encryptedOutput);
-		$this->database->bind(":ID", $this->random);
+		$this->database->bind(":pID", $this->random);
 		$this->database->bind(":insertIP", $_SERVER['REMOTE_ADDR']);
 		$this->database->bind(":date", date("l jS \of F Y h:i:s A"));
 		
@@ -105,7 +105,7 @@ protected $database;
 	
 	function viewPaste($id){		//Viewing paste function for the basic viewing, requires $id we use: $_GET['id'] from the retrieve.php.
 	
-		$this->database->query("SELECT ID, paste, insertIP, date FROM pastes WHERE ID = :pid");
+		$this->database->query("SELECT pID, paste, insertIP, date FROM pastes WHERE pID = :pid");
 		$this->database->bind(":pid", $id);
 		
 		$this->getRow = $this->database->single();

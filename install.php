@@ -35,7 +35,8 @@ if(isset($_POST['install'])){
 		$db = new PDO($dsn, $user, $pass);
 		$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );//Error Handling
 		$sql ="CREATE table $table(
-			`ID` varchar(32) NOT NULL,
+			`id` int NOT NULL AUTO_INCREMENT,
+			`pID` varchar(32) NOT NULL,
 			`paste` mediumtext NOT NULL,
 			`insertIP` varchar(10) NOT NULL,
 			`date` varchar(20) NOT NULL);";
