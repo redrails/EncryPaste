@@ -66,3 +66,4 @@ if(isset($_POST['submit'])){
 		Created by <a href="http://www.ihtasham.com/">Ihtasham</a>
 	</div>
  </html>
+ 
